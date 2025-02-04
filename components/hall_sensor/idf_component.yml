@@ -1,0 +1,17 @@
+name: hall sensor
+description: Hall Sensor Library This library provides functionalities to read data from a Hall sensor and manage the data flow between producer and consumer tasks using FreeRTOS queues.
+version: 1.0.0
+groups:
+  - sensors
+  - signal_processing
+code_owners:
+  - gusdistefano
+depends:
+  - driver
+thread_safe: no
+targets:
+  - esp32
+license: proprietary
+copyrights:
+  - name: gusdistefano
+    year: 2024

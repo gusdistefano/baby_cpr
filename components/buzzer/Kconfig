@@ -1,0 +1,15 @@
+menu "Buzzer"
+
+    config BUZZER_PIN
+		int "Select buzzer pin"
+		range 0 30
+		default 12
+		help
+			Select pin to connect the buzzer signal
+
+	config BUZZER_DEFAULT_VOLUME
+		int "Select default Volume"
+		range 0 100
+		default 25
+		
+endmenu

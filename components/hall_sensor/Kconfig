@@ -1,0 +1,23 @@
+menu "Hall Sensor"
+
+	config HALL_SENSOR_ADC_CHANNEL
+		int "Select ADC1 Channel"
+		range 0 20
+		default 0
+		help
+			Select the ADC channel (Only ADC1)
+
+	config HALL_SENSOR_SAMPLES
+		int "Samples of ADC"
+		range 1 1000
+		default 64
+		help
+			Number of ADC readings to average.
+	
+	config HALL_SENSOR_SAMPLE_INTERVAL_MS
+		int "Sample Interval in ms"
+		range 15 125
+		default 80
+		help
+			Interval between samples in milliseconds, with sampling frequencies ranging from 15 Hz to 8 Hz
+endmenu
