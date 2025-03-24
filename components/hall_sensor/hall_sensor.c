@@ -140,10 +140,6 @@ static void detect_valleys(data_point_t current, data_point_t previous)
                 {
                     stats(last_valley, previous, last_peak.value - previous.value);
                     counter++;
-                    if (xQueueSend(hall_sensor_data_queue, &cpr_stats, portMAX_DELAY) != pdPASS)
-                    {
-                        printf("Error: Queue is full, data could not be sent\n");
-                    }
                     last_valley = previous;
                 }
             }
